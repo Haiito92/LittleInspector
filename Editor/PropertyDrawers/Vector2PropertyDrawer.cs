@@ -1,6 +1,4 @@
-using System;
 using HaiitoCorp.LittleInspector.Editor.Json;
-using Unity.Plastic.Newtonsoft.Json;
 using UnityEditor;
 using UnityEngine;
 using UnityEngine.UIElements;
@@ -14,23 +12,23 @@ namespace HaiitoCorp.LittleInspector.Editor.PropertyDrawers
         {
             EditorGUILayout.BeginHorizontal();
             GUILayout.Label(label);
-            if (GUILayout.Button("C"))
+            property.vector2Value = EditorGUILayout.Vector2Field("", new Vector2(property.vector2Value.x,property.vector2Value.y));
+            
+            if (GUILayout.Button("C", GUILayout.MinWidth(20), GUILayout.MaxWidth(30)))
             {
                 CopyVector2(property); 
             }
             
-            if (GUILayout.Button("P"))
+            if (GUILayout.Button("P", GUILayout.MinWidth(20), GUILayout.MaxWidth(30)))
             {
                 PasteVector2(property);
             }
             
-            if (GUILayout.Button("R"))
+            if (GUILayout.Button("R", GUILayout.MinWidth(20), GUILayout.MaxWidth(30)))
             {
                 ResetVector2(property);
             }
             EditorGUILayout.EndHorizontal();
-            
-            property.vector2Value = EditorGUILayout.Vector2Field("", new Vector2(property.vector2Value.x,property.vector2Value.y));
             
             EditorGUILayout.Space(5);
         }

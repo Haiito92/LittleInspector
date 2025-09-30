@@ -13,23 +13,24 @@ namespace HaiitoCorp.LittleInspector.Editor.PropertyDrawers
         {
             EditorGUILayout.BeginHorizontal();
             GUILayout.Label(label);
-            if (GUILayout.Button("C"))
+            property.vector3Value = EditorGUILayout.Vector3Field("", new Vector3(property.vector3Value.x,property.vector3Value.y, property.vector3Value.z));
+
+            if (GUILayout.Button("C", GUILayout.MinWidth(20), GUILayout.MaxWidth(30)))
             {
                 CopyVector3(property); 
             }
             
-            if (GUILayout.Button("P"))
+            if (GUILayout.Button("P", GUILayout.MinWidth(20), GUILayout.MaxWidth(30)))
             {
                 PasteVector3(property);
             }
             
-            if (GUILayout.Button("R"))
+            if (GUILayout.Button("R", GUILayout.MinWidth(20), GUILayout.MaxWidth(30)))
             {
                 ResetVector3(property);
             }
             EditorGUILayout.EndHorizontal();
             
-            property.vector3Value = EditorGUILayout.Vector3Field("", new Vector3(property.vector3Value.x,property.vector3Value.y, property.vector3Value.z));
             
             EditorGUILayout.Space(5);
         }
