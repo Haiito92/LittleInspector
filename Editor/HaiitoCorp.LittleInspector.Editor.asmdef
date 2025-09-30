@@ -1,6 +1,6 @@
 {
-    "name": "HaiitoCorp.LittlePropertyDrawers.Editor",
-    "rootNamespace": "HaiitoCorp.LittlePropertyDrawers.Editor",
+    "name": "HaiitoCorp.LittleInspector.Editor",
+    "rootNamespace": "HaiitoCorp.LittleInspector.Editor",
     "references": [],
     "includePlatforms": [],
     "excludePlatforms": [],

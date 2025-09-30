@@ -1,8 +1,8 @@
 {
-  "name": "com.haiitocorp.littlepropertydrawers",
+  "name": "com.haiitocorp.littleinspector",
   "version": "1.0.0",
-  "displayName": "Little Property Drawers",
-  "description": "Gives native Unity types a better property drawer.",
+  "displayName": "Little Inspector",
+  "description": "Adds quality of life to the native Unity types inspector.",
   "unity": "2022.3",
   "dependencies": {
   },

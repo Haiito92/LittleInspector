@@ -1,4 +1,4 @@
-## Little Property Drawers
+## Little Inspector
 
-Little Property Drawers is a package that gives native Unity types a better property drawer. 
+Little Inspector is a package that gives native Unity types inspector, property drawers, etc... 
 
