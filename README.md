@@ -1,7 +1,4 @@
-## Little Favorites
+## Little Property Drawers
 
-Little Favorites is a package that lets you have a window in which you can keep your favorite assets.
+Little Property Drawers is a package that gives native Unity types a better property drawer. 
 
-### Where to find it ?
-
-This tool is under <b>Tools/HaiitoCorp/LittleFavorites</b> in the editor.
