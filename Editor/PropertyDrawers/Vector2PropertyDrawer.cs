@@ -4,6 +4,43 @@ using UnityEngine;
 
 namespace HaiitoCorp.LittleInspector.Editor.PropertyDrawers
 {
+    #if ODIN_INSPECTOR
+
+    public class Vector2OdinValueDrawer : VectorOdinValueDrawerBase<Vector2>
+    {
+        protected override GUIContent CreateLabel()
+        {
+            return new GUIContent("Vector 2");
+        }
+
+        protected override Vector2 DrawVectorField(GUIContent label, Vector2 value)
+        {
+            return EditorGUILayout.Vector2Field(label, value);
+        }
+
+        protected override void CopyVector(Vector2 value)
+        {
+            string clip = $"Vector2({value.x},{value.y})";
+            EditorGUIUtility.systemCopyBuffer = clip;
+        }
+
+        protected override Vector2 PasteVector(Vector2 currentValue)
+        {
+            if(JsonParsing.TryJsonToVector2(EditorGUIUtility.systemCopyBuffer, out Vector2 outVector))
+            {
+                return outVector;
+            }
+            
+            return currentValue;
+        }
+
+        protected override Vector2 ResetVector()
+        {
+            return Vector2.zero;
+        }
+    }
+    
+    #else
     [CustomPropertyDrawer(typeof(Vector2))]
     public class Vector2PropertyDrawer : VectorPropertyDrawerBase
     {
@@ -31,4 +68,5 @@ namespace HaiitoCorp.LittleInspector.Editor.PropertyDrawers
             property.vector2Value = Vector2.zero;
         }
     }
+    #endif
 }
