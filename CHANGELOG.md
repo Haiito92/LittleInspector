@@ -1,3 +1,7 @@
+## [1.0.1] - 2025-10-01
+### Vector 2 and 3 OdinValueDrawers
+- Add support for OdinValueDrawers for Vector 2 and 3.
+
 ## [1.0.0] - 2025-10-01
 ### First Release
 - Property Drawer for Vector 2 and Vector 3. Only show on custom made components and classes.

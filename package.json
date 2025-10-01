@@ -1,6 +1,6 @@
 {
   "name": "com.haiitocorp.littleinspector",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "displayName": "Little Inspector",
   "description": "Adds quality of life to the native Unity types inspector.",
   "unity": "2022.3",
