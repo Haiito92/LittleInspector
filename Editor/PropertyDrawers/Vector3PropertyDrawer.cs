@@ -15,7 +15,7 @@ namespace HaiitoCorp.LittleInspector.Editor.PropertyDrawers
 
         protected override Vector3 DrawVectorField(GUIContent label, Vector3 value)
         {
-            return EditorGUILayout.Vector2Field(label, value);
+            return EditorGUILayout.Vector3Field(label, value);
         }
 
         protected override void CopyVector(Vector3 value)
