@@ -1,3 +1,4 @@
+using System.Globalization;
 using HaiitoCorp.LittleInspector.Editor.Json;
 using UnityEditor;
 using UnityEngine;
@@ -20,7 +21,7 @@ namespace HaiitoCorp.LittleInspector.Editor.PropertyDrawers
 
         protected override void CopyVector(Vector2 value)
         {
-            string clip = $"Vector2({value.x},{value.y})";
+            string clip = $"Vector2({value.x.ToString(CultureInfo.InvariantCulture)},{value.y.ToString(CultureInfo.InvariantCulture)})";
             EditorGUIUtility.systemCopyBuffer = clip;
         }
 
@@ -51,7 +52,7 @@ namespace HaiitoCorp.LittleInspector.Editor.PropertyDrawers
 
         protected override void CopyVector(SerializedProperty property)
         {
-            string clip = $"Vector2({property.vector2Value.x},{property.vector2Value.y})";
+            string clip = $"Vector2({property.vector2Value.x.ToString(CultureInfo.InvariantCulture)},{property.vector2Value.y.ToString(CultureInfo.InvariantCulture)})";
             EditorGUIUtility.systemCopyBuffer = clip;
         }
 
